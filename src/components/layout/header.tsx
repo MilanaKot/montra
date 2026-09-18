@@ -55,7 +55,11 @@ function BranchSelector({ className }: { className?: string }) {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className="font-display flex items-center gap-1.5 rounded-pill border border-border-subtle px-4 py-1.5 text-[1.0625rem] leading-none transition-colors hover:border-foreground/40"
+        /* Inter, same as the nav beside it. The only serif in the header is
+           the logo — a second, different serif next to it reads as a mistake.
+           What made this look like a utility chip was the uppercase and the
+           wide tracking, not the typeface. */
+        className="flex items-center gap-1.5 rounded-pill border border-border-subtle px-4 py-2 text-[0.9375rem] leading-none text-secondary transition-colors hover:border-foreground/40 hover:text-foreground"
       >
         {LOCATION.branchName}
         <svg viewBox="0 0 10 6" className="size-2.5" aria-hidden="true" fill="none">
