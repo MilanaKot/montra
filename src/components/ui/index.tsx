@@ -82,8 +82,13 @@ const BUTTON_BASE =
   'active:scale-[0.98] disabled:pointer-events-none disabled:opacity-45 text-center'
 
 const BUTTON_VARIANTS: Record<ButtonVariant, string> = {
-  // Cream text on terracotta — 4.77:1, and 6.22:1 once hover darkens it.
-  primary: 'bg-accent text-background hover:bg-accent-secondary',
+  /*
+   * Cream text on terracotta — 4.77:1, and 6.22:1 once hover darkens it.
+   * Heavier than the other variants on purpose: the primary action should
+   * read as the primary action, and the extra weight also thickens the
+   * strokes against the terracotta.
+   */
+  primary: 'bg-accent text-background font-semibold hover:bg-accent-secondary',
   secondary: 'border border-foreground/85 text-foreground hover:bg-foreground hover:text-background',
   ghost: 'text-foreground hover:bg-foreground/[0.06]',
   dark: 'bg-foreground text-background hover:bg-foreground/85',
