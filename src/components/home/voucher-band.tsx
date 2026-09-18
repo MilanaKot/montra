@@ -5,12 +5,12 @@ export function VoucherBand() {
   return (
     <section className="section-tight">
       <Container>
-        <div className="relative overflow-hidden rounded-[2rem] bg-accent">
+        <div className="relative overflow-hidden rounded-[2rem] bg-accent text-background">
           <div className="grid items-center gap-0 md:grid-cols-2">
             <div className="p-8 sm:p-12 lg:p-16">
-              <Eyebrow className="text-foreground/70">Dárkové poukazy</Eyebrow>
+              <Eyebrow className="text-background/75">Dárkové poukazy</Eyebrow>
               <h2 className="text-display-2 mt-5">Darujte chvíli klidu.</h2>
-              <p className="text-body-lg mt-6 max-w-sm text-foreground/75">
+              <p className="text-body-lg mt-6 max-w-sm text-background/85">
                 Dárkový poukaz na masáž Montra doručíme e-mailem. Platí na jakoukoli
                 masáž a nemusíte ho vyčerpat najednou.
               </p>

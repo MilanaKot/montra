@@ -90,7 +90,6 @@ function StructuredData() {
         closes: '20:00',
       },
     ],
-    sameAs: [LOCATION.social.facebook],
     currenciesAccepted: 'CZK',
   }
   return (

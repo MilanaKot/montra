@@ -11,8 +11,12 @@
   /* The logo's own ink, sampled from the supplied flat artwork. 8.7:1 on cream. */
   --color-brand-ink: #5f4024;
 
-  --color-accent: #b5613c;
-  --color-accent-secondary: #c67349;
+  /* Terracotta carries cream text, so it must be deep enough for it:
+     #a85736 gives 4.77:1 against the cream, #b5613c only 4.10:1.
+     accent-secondary darkens on hover and doubles as accent-coloured text
+     on cream, where it reads 6.22:1. */
+  --color-accent: #a85736;
+  --color-accent-secondary: #8f4829;
 
   --color-border: rgb(0 0 0 / 0.85);
   --color-border-subtle: rgb(0 0 0 / 0.12);

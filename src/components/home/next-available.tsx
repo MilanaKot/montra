@@ -47,7 +47,7 @@ export async function NextAvailable() {
                     {slot.durationMinutes} min · {formatPrice(slot.priceCzk)}
                   </p>
                   {slot.promotion ? (
-                    <span className="text-eyebrow mt-4 inline-flex w-fit rounded-pill bg-accent px-2.5 py-1 text-foreground">
+                    <span className="text-eyebrow mt-4 inline-flex w-fit rounded-pill bg-accent px-2.5 py-1 text-background">
                       {slot.promotion.label}
                     </span>
                   ) : (

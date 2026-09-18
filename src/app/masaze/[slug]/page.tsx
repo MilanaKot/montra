@@ -129,7 +129,7 @@ export default async function ServiceDetail({
                         {formatPrice(d.priceCzk)}
                       </span>
                       {d.recommended ? (
-                        <span className="text-eyebrow rounded-pill bg-accent px-2 py-0.5 text-foreground">
+                        <span className="text-eyebrow rounded-pill bg-accent px-2 py-0.5 text-background">
                           Doporučujeme
                         </span>
                       ) : null}

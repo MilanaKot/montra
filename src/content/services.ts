@@ -118,7 +118,7 @@ export const SERVICES: Service[] = [
     ],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.backNeck,
+    image: IMG.lounge,
     legacyDescription:
       'Masáž k odstranění a prevenci bolestí hlavy a migrény, při které, jemnými hmaty, masérka uvolňuje šíjové a mimické svalstvo, využívá akupresurní body. Již po první masáži není migréna intenzivní. Nejvhodnější je masáž jako prevence. Pravidelná masáž Vás dokáže migreny zbavit.',
   },
@@ -164,7 +164,7 @@ export const SERVICES: Service[] = [
     notes: ['Masáž probíhá v oblečení — není potřeba se odstrojovat.'],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.backNeck,
+    image: IMG.reception,
     legacyDescription:
       'Vhodná kdykoliv během dne či ráno. Office masáží se rozumí akutní masážní procedura uprostřed dne, která má za cíl zbavit napětí a tlaku. Tato masáž se zaměřuje na šíji, krk a ruce pro uvolnění karpálů. Vychází z tradiční thajské masáže. Masérka působí různými způsoby masírování a dochází tak k uvolnění napětí, zmírnění stresu a průchodnosti energie do konečků prstů. Masíruje se krk, šíje, ramena a ruce. Tato masáž probíhá v oblečení, lze při ní sedět i ležet. K této thajské masáži stačí půlhodina, během níž dojde k příjemnému uvolnění. Můžete si ale i dopřát masáž hodinovou.',
   },
@@ -208,7 +208,7 @@ export const SERVICES: Service[] = [
     notes: ['Při zakoupení celé série 10 procedur je další procedura zdarma.'],
     requiredTherapists: 1,
     partySizes: [1],
-    image: IMG.backNeck,
+    image: IMG.oil,
     legacyDescription:
       'Pomocí manuální thajské anti cellulite masáže a skořicového oleje, docílíte nejlepšího výsledku. Oleje obsahují přírodní látky, které zlepší krevní oběh a zbaví tělo toxických látek. Ve spojení s masáží pomáhají odbourat podkožní tuk a tím zmenšit objem. Masérka se přizpůsobí Vašemu tělu, masáž je ruční, neprobíhá strojově. Skořicový olej prohřívá a tím prokrvuje pokožku. Spolu se speciální masáží dochází k odbourávání celulitidy ve velmi krátké době. Vhodné jako serie opakovaných procedur. Doporučujeme po dobu procedur zvýšit pohyb a příjem tekutin (voda, bylinné čaje). PŘI ZAKOUPENÍ CELÉ SERIE PROCEDUR (10ks), DALŠÍ PROCEDURA ZDARMA. Doporučeno 10 intervalů po 90 min.',
   },

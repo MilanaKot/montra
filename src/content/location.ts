@@ -9,6 +9,8 @@ export const LOCATION = {
   name: 'Montra Beroun',
   legalName: 'Thajské masáže Montra',
   branchLabel: 'BEROUN',
+  /** Natural case — the branch selector is set in the display serif. */
+  branchName: 'Beroun',
 
   address: {
     street: 'Slapská 130',
@@ -42,9 +44,12 @@ export const LOCATION = {
   openingHoursSummary: 'Po–So 9:00–20:00',
   openingHoursNote: 'Neděle po dohodě. V pátek a sobotu masírujeme po domluvě i do 21:00.',
 
-  social: {
-    facebook: 'https://www.facebook.com/beroun.cz/',
-  },
+  /**
+   * Deliberately empty: the salon has a Facebook page
+   * (facebook.com/beroun.cz) but it is not linked from the site. Put profiles
+   * back here and they reappear in the footer and in `sameAs`.
+   */
+  social: {} as Record<string, string>,
 
   maps: {
     directions:

@@ -56,9 +56,9 @@ function BranchSelector({ className }: { className?: string }) {
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-haspopup="menu"
-        className="text-eyebrow flex items-center gap-1.5 rounded-pill border border-border-subtle px-3.5 py-2 transition-colors hover:border-foreground/40"
+        className="font-display flex items-center gap-1.5 rounded-pill border border-border-subtle px-4 py-1.5 text-[1.0625rem] leading-none transition-colors hover:border-foreground/40"
       >
-        {LOCATION.branchLabel}
+        {LOCATION.branchName}
         <svg viewBox="0 0 10 6" className="size-2.5" aria-hidden="true" fill="none">
           <path d="M1 1l4 4 4-4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
         </svg>

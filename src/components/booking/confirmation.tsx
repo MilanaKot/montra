@@ -9,7 +9,7 @@ import { formatPrice } from '@/lib/utils'
 
 function CheckIcon() {
   return (
-    <span className="grid size-16 place-items-center rounded-full bg-accent">
+    <span className="grid size-16 place-items-center rounded-full bg-accent text-background">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="size-8">
         <path
           d="M5 12.5l4.5 4.5L19 7.5"

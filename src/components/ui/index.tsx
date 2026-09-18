@@ -82,8 +82,8 @@ const BUTTON_BASE =
   'active:scale-[0.98] disabled:pointer-events-none disabled:opacity-45 text-center'
 
 const BUTTON_VARIANTS: Record<ButtonVariant, string> = {
-  // Black text on accent — 7.9:1. Never white text on accent (2.7:1).
-  primary: 'bg-accent text-foreground hover:bg-accent-secondary',
+  // Cream text on terracotta — 4.77:1, and 6.22:1 once hover darkens it.
+  primary: 'bg-accent text-background hover:bg-accent-secondary',
   secondary: 'border border-foreground/85 text-foreground hover:bg-foreground hover:text-background',
   ghost: 'text-foreground hover:bg-foreground/[0.06]',
   dark: 'bg-foreground text-background hover:bg-foreground/85',
@@ -164,7 +164,7 @@ export function Badge({
 }) {
   const tones = {
     neutral: 'bg-foreground/[0.06] text-secondary',
-    accent: 'bg-accent text-foreground',
+    accent: 'bg-accent text-background',
     outline: 'border border-border-subtle text-secondary',
   } as const
   return (

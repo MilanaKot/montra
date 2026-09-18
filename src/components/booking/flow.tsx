@@ -522,7 +522,7 @@ export function BookingFlow() {
                 <label className="flex cursor-pointer items-start gap-3 pt-1">
                   <input
                     type="checkbox"
-                    className="mt-1 size-4 shrink-0 accent-[#FA7864]"
+                    className="mt-1 size-4 shrink-0 accent-accent"
                     checked={state.marketingConsent}
                     onChange={(e) => set({ marketingConsent: e.target.checked })}
                   />
@@ -602,7 +602,7 @@ function Summary({ state }: { state: BookingState }) {
           <dt className="text-small text-secondary">Cena</dt>
           <dd className="text-right">
             {state.promotionLabel ? (
-              <span className="text-eyebrow mr-2 rounded-pill bg-accent px-2 py-0.5">
+              <span className="text-eyebrow mr-2 rounded-pill bg-accent px-2 py-0.5 text-background">
                 {state.promotionLabel}
               </span>
             ) : null}

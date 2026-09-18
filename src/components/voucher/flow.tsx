@@ -64,7 +64,7 @@ export function VoucherFlow() {
     return (
       <Container>
         <div className="mx-auto max-w-[40rem] py-16 text-center md:py-24">
-          <span className="mx-auto grid size-16 place-items-center rounded-full bg-accent">
+          <span className="mx-auto grid size-16 place-items-center rounded-full bg-accent text-background">
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" className="size-8">
               <path
                 d="M5 12.5l4.5 4.5L19 7.5"
@@ -347,7 +347,7 @@ export function VoucherFlow() {
                   <label className="flex cursor-pointer items-center gap-3">
                     <input
                       type="checkbox"
-                      className="size-4 accent-[#FA7864]"
+                      className="size-4 accent-accent"
                       checked={company}
                       onChange={(e) => setCompany(e.target.checked)}
                     />

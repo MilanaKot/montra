@@ -44,12 +44,6 @@ export function Footer() {
               Thajské masáže v Berouně. Otevřeli jsme zde jako první salon Montra
               v dubnu 2009.
             </p>
-            <a
-              href={LOCATION.social.facebook}
-              className="mt-6 inline-flex items-center gap-2 text-[0.9375rem] underline underline-offset-4 transition-colors hover:text-secondary"
-            >
-              Facebook
-            </a>
           </div>
 
           <nav aria-label="Patička" className="md:col-span-3">
