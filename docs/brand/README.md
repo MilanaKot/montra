@@ -16,6 +16,7 @@ práh na světlost, žádné triky s teplotou barvy, které si vyžádal mockup.
 | Soubor | Použití |
 |---|---|
 | `public/brand/montra-mark.svg` | **vektor** samotného znaku, `fill="currentColor"` — barvu řídí CSS |
+| `public/brand/montra-wordmark.svg` | **vektor** nápisu „Montra“ v původním písmu loga |
 | `public/brand/montra-lockup.svg` | **vektor** celého lockupu včetně podtitulu |
 | `public/brand/montra-mark.png` | rastr znaku, tmavě hnědá |
 | `public/brand/montra-lockup.png` | rastr lockupu, tmavě hnědá |
@@ -32,7 +33,7 @@ Kontrast `#5F4024` na krémové `#FFF5E6` je 8,7:1.
 
 ## Kde se logo na webu používá
 
-V hlavičce a patičce stojí lotos vedle nápisu „MONTRA“, obojí v barvě
+V hlavičce a patičce stojí lotos vedle nápisu „Montra“, obojí v barvě
 `--color-brand-ink` (`#5F4024`) — vlastní barvě loga, odečtené z dodané
 ploché kresby. Kontrast na krémové je 8,7:1.
 
@@ -45,8 +46,13 @@ Před obkreslením se zahazují komponenty menší než 500 px. Výřez sedí t�
 nad nápisem a zachytával levou patku písmene „M“, která se pak pod květem
 objevovala jako smítko.
 
-Celý lockup se v rozhraní nepoužívá — je stavěný na výšku a do hlavičky se
-nevejde.
+Nápis **není vysázený písmem** — je to obkreslená kresba z loga. Dřív stálo
+v hlavičce „MONTRA“ v Interu, verzálkami a s velkým prostrkáním; to je styl
+rozhraní, ne značky. Skutečný nápis je kontrastní serif s výraznou „M“.
+Použít přímo jeho je přesnější než hledat podobné písmo, které nemáme.
+
+Celý svislý lockup se v rozhraní nepoužívá — do hlavičky se nevejde.
+Vodorovná sestava se skládá ze znaku a nápisu zvlášť.
 
 ## Co chybí
 

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { LogoMark } from '@/components/brand/logo-mark'
+import { LogoWordmark } from '@/components/brand/logo-wordmark'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { LOCATION } from '@/content/location'
@@ -24,9 +25,7 @@ function Wordmark() {
       aria-label="Montra Beroun — úvodní stránka"
     >
       <LogoMark className="h-7 w-auto sm:h-8" />
-      <span className="text-[1.25rem] leading-none font-medium tracking-[0.18em] whitespace-nowrap uppercase sm:text-[1.375rem] sm:tracking-[0.24em]">
-        Montra
-      </span>
+      <LogoWordmark className="h-4 w-auto sm:h-[1.125rem]" />
     </Link>
   )
 }
