@@ -1,0 +1,225 @@
+@import 'tailwindcss';
+
+/* ------------------------------------------------------------------ tokens */
+@theme {
+  /* Palette — the six brand values, plus alphas derived from --color-foreground.
+     No additional hues. */
+  --color-background: #fff5e6;
+  --color-foreground: #000000;
+  --color-secondary: #707070;
+  --color-surface: #ffffff;
+  --color-accent: #fa7864;
+  --color-accent-secondary: #dc8264;
+
+  --color-border: rgb(0 0 0 / 0.85);
+  --color-border-subtle: rgb(0 0 0 / 0.12);
+  --color-border-hairline: rgb(0 0 0 / 0.08);
+
+  /* Typography */
+  --font-display: var(--font-garamond), 'EB Garamond', Georgia, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+  /* Layout */
+  --spacing-gutter: 1.5rem; /* 24px */
+  --container-site: 75rem; /* 1200px */
+
+  /* Radii — cards 16–24px, pills fully round */
+  --radius-card: 1.25rem;
+  --radius-card-lg: 1.5rem;
+  --radius-pill: 999px;
+
+  /* Motion */
+  --ease-out-soft: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ------------------------------------------------------------------- base */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    /* Never allow a horizontal scrollbar on small viewports. */
+    overflow-x: hidden;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  p {
+    margin: 0;
+    text-wrap: pretty;
+  }
+
+  /* Visible focus everywhere, but only for keyboard users. */
+  :focus-visible {
+    outline: 2px solid var(--color-foreground);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: var(--color-foreground);
+  }
+
+  img,
+  svg,
+  video {
+    display: block;
+    max-width: 100%;
+  }
+
+  /* Inputs inherit the type system rather than the UA stylesheet. */
+  input,
+  textarea,
+  select,
+  button {
+    font: inherit;
+    color: inherit;
+  }
+}
+
+/* --------------------------------------------------------------- utilities */
+@utility container-site {
+  width: 100%;
+  max-width: var(--container-site);
+  margin-inline: auto;
+  /* 24px is the desktop spec; small phones need a tighter gutter so the
+     header (wordmark + CTA + menu) fits 320px without horizontal scroll. */
+  padding-inline: 1.25rem;
+  @media (width >= 30rem) {
+    padding-inline: var(--spacing-gutter);
+  }
+}
+
+/* Section rhythm: 56–72px mobile, 80–120px desktop. */
+@utility section {
+  padding-block: 3.5rem;
+  @media (width >= 48rem) {
+    padding-block: 5rem;
+  }
+  @media (width >= 64rem) {
+    padding-block: 7rem;
+  }
+}
+
+@utility section-tight {
+  padding-block: 3rem;
+  @media (width >= 48rem) {
+    padding-block: 4rem;
+  }
+  @media (width >= 64rem) {
+    padding-block: 5rem;
+  }
+}
+
+/* Display scale from the brief. */
+@utility text-display-1 {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+@utility text-display-2 {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 4rem);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+@utility text-display-3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.625rem, 2.4vw, 2.25rem);
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+@utility text-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+@utility text-body-lg {
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  @media (width >= 48rem) {
+    font-size: 1.125rem;
+  }
+}
+
+@utility text-small {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  @media (width >= 48rem) {
+    font-size: 0.875rem;
+  }
+}
+
+/* Accessible "visible only to screen readers". */
+@utility sr-only-focusable {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  &:focus-visible {
+    position: fixed;
+    top: 0.75rem;
+    left: 0.75rem;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0.75rem 1.25rem;
+    clip-path: none;
+    background: var(--color-foreground);
+    color: var(--color-background);
+    border-radius: var(--radius-pill);
+    z-index: 100;
+  }
+}
