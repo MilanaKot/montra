@@ -1,14 +1,20 @@
 import type { Service } from './services.types'
 
 const IMG = {
-  thai: '/images/salon-masazni-lehatko.png',
-  oil: '/images/salon-oleje-a-bylinky.png',
-  herbs: '/images/salon-bylinne-sacky.png',
-  reception: '/images/salon-recepce.png',
-  lounge: '/images/salon-relaxacni-zona.png',
-  room: '/images/salon-masazni-mistnost.png',
-  backNeck: '/images/masaz-zada-a-sije.png',
-  couple: '/images/salon-parova-mistnost.png',
+  thai: '/images/salon-masazni-lehatko.jpg',
+  oil: '/images/salon-oleje-a-bylinky.jpg',
+  herbs: '/images/salon-bylinne-sacky.jpg',
+  reception: '/images/salon-recepce.jpg',
+  lounge: '/images/salon-relaxacni-zona.jpg',
+  room: '/images/salon-masazni-mistnost.jpg',
+  backNeck: '/images/masaz-zada-a-sije.jpg',
+  couple: '/images/salon-parova-mistnost.jpg',
+  feet: '/images/masaz-nohou.jpg',
+  face: '/images/masaz-obliceje.jpg',
+  stones: '/images/hot-stone.jpg',
+  pregnancy: '/images/masaz-tehotenska.jpg',
+  fourHands: '/images/masaz-ctyri-ruce.jpg',
+  oilMassage: '/images/masaz-olejova.jpg',
 } as const
 
 /**
@@ -61,7 +67,7 @@ export const SERVICES: Service[] = [
     ],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.oil,
+    image: IMG.oilMassage,
     popular: true,
     legacyDescription:
       'Orientální terapie, při níž se vmasírovává olej do svalů, prospívá pleti a podporuje činnost lymfatického systému, který odvádí škodliviny z těla. Pravidelná masáž posiluje svaly, redukuje otoky, zbavuje odumřelých částí kůže a navrací mladistvý vzhled.',
@@ -135,7 +141,7 @@ export const SERVICES: Service[] = [
     ],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.lounge,
+    image: IMG.feet,
     legacyDescription:
       'Akupresurní masáž reflexních bodů na chodidlech spojená s masáží svalů lýtek, vmasírování oleje do chodidel a uvolnění jednotlivých prstců. Thajská masáž nohou má uvolňující účinek a působí příznivě na psychiku.',
   },
@@ -179,7 +185,7 @@ export const SERVICES: Service[] = [
     ],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.reception,
+    image: IMG.face,
     legacyDescription:
       'Omlazující masáž obličeje olejem od české firmy Saloos s výtažky z rostlin pro posílení pleti a zmírnění drobných vrásek. Díky ruční masáži se olej absorbuje do spodní vrstvy kůže a navrací mladistvý a odpočatý vzhled. Masáž je vhodným doplňkem k hodinové masáži při komplexní péči o tělo. Již po první masáži je okem viditelný výsledek vypnuté pleti. Při pravidelné masáži obličeje mizí jemné vrásky a hluboké se velmi zmírní.',
   },
@@ -317,7 +323,7 @@ SERVICES.push(
     ],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.oil,
+    image: IMG.oilMassage,
     legacyDescription:
       'Spojení dvou nádherných masáží - olejová masáž celého těla nahřátým olejem, který vaše tělo prohřeje a masérka uvolní ztuhlé svaly a vám dodá pocit tepla v zimním období, jako by jste leželi na prohřáté pláži ve slunném Thajsku...doporučujeme po masáži obličejovou masáž bio obličejovým olejíčkem Saloos (naleznete v ceníku pod názvem Obličejová masáž)',
   },
@@ -482,7 +488,7 @@ SERVICES.push(
     notes: ['V délce 60 minut se masírují pouze záda.'],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.herbs,
+    image: IMG.stones,
     popular: true,
     legacyDescription:
       'Masáž lávovými kameny patří mezi nejluxusnější masáže, která svými účinky určitě uspokojí i ty nejnáročnější klienty. Dopřejte si masáž horkými kameny z hlubin země a uvolněte se díky teplu, které se postupně rozlévá po celém Vašem těle. Nechejte své tělo hýčkat příjemnými masážními tahy a dopřejte mu energii, která přichází z lávových kamenů. K masáži se používají speciální lávové kameny, které výborně akumulují teplo a tím přispívají k větší účinnosti masáže. Tyto kameny mají zároveň i mimořádně silnou energetickou vibraci. Lávové kameny pomáhají odstraňovat blokace na důležitých bodech (meridiánech) a rozproudí energii ve Vašem těle. Masáž lávovými kameny má vysoký terapeutický a relaxační účinek. Správně provedená masáž Vás dovede k absolutní relaxaci, a mnohdy Vás ukolébá i k posilujícímu spánku. Ještě dlouho po masáži budete cítit hluboký klid a vyrovnání. Lávové kameny se nahřejí ve vodní lázni na teplotu 40 - 50 °C. Jednotlivé partie těla jsou nejdříve masírovány lávovými kameny. Tímto opravdu příjemným způsobem postupně uvolníme svalstvo a pak ještě důkladně promasírujeme bez kamenů. Zvýší se tak účinek oproti klasické masáži. Nakonec je provedena celková harmonizace těla.',
@@ -526,7 +532,7 @@ SERVICES.push(
     ],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.reception,
+    image: IMG.face,
     legacyDescription:
       'Omlazující péče o pleť v pěti krocích: Čištění pleti jemnou masáží. Peeling pro odstranění odumřelých buněk a rozjasnění pleti. Liftingová masáž, při které masérka stimuluje akupresurní body. Nanesení omlazující masky s vyhlazujícím efektem. Vmasírování rostlinného elixíru s vyhlazujícím efektem. Používáme výrobky od české firmy Saloos.',
   },
@@ -551,7 +557,7 @@ SERVICES.push(
     notes: ['Pouze pro děti do 12 let. Doprovod rodiče je vítán.'],
     requiredTherapists: 1,
     partySizes: [1],
-    image: IMG.lounge,
+    image: IMG.oilMassage,
     legacyDescription: 'Jemná celotělová masáž pro děti do 12 let.',
   },
   {
@@ -577,7 +583,7 @@ SERVICES.push(
     ],
     requiredTherapists: 1,
     partySizes: [1],
-    image: IMG.oil,
+    image: IMG.pregnancy,
     legacyDescription:
       'Celotělová relaxační masáž. Dopřejte pokožce, napínající se při těhotenství, pěstící kůru, pomocí bio kokosového oleje, který je lisovaný za studena a obohacený o vzácné vonné extrakty. Možno doplnit výběr: Čokoláda, pomeranč nebo caffe latte - hlaste si při objednání. Proniká do hloubky a působí proti vzniku strií. Skvěle hydratuje, zjemňuje a chrání před vysycháním. Během masáže terapeutka vmasíruje olej do hloubky a vaše pleť bude vyživená a zamezí jejímu praskání. Masáž je uzpůsobena stadiu těhotenství, který nahlašte již při objednání i před samotnou masáží. Těhotenskou masáž provádíme od ukončeného třetího měsíce.',
   },
@@ -624,7 +630,7 @@ SERVICES.push(
     notes: ['Masáž provádějí dvě masérky současně — rezervace vyžaduje dva volné terapeuty.'],
     requiredTherapists: 2,
     partySizes: [1],
-    image: IMG.couple,
+    image: IMG.fourHands,
     legacyDescription:
       'Masáž „čtyř rukou“ je velmi intenzivní synchronní masáž, dvěma masérkami současně. Tato metoda znásobuje účinek klasické thajské olejové masáže a mnohem účinněji tak odbourává svalové napětí a stres. Thajská olejová masáž je prováděna originálním biokokosovým olejem. Jde o kombinaci klasické thajské masáže spolu s jemnou masáží celého těla od konečků prstců na nohách až po kořínky vlasů za pomocí olejů, které napomáhají k celkové relaxaci, odstranění únavy, bolesti a nastavení duševní a tělesné harmonie. Tento druh masáže je obzvláště účinný při odstraňování napětí a ztuhlosti svalů. Působí také blahodárně na pokožku. Doporučujeme masáž v délce 2 hodin.',
   },

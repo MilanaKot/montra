@@ -53,7 +53,7 @@ export function Hero() {
           <div className="lg:col-span-6 xl:col-span-6">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[5/4] lg:aspect-[4/5]">
               <Image
-                src="/images/salon-masazni-mistnost.png"
+                src="/images/salon-masazni-mistnost.jpg"
                 alt="Masážní místnost salonu Montra Beroun — thajská matrace s válcovým polštářem v odpoledním světle"
                 fill
                 priority

@@ -20,8 +20,8 @@ export function VoucherBand() {
             </div>
             <div className="relative aspect-[4/3] md:aspect-auto md:h-full md:min-h-[26rem]">
               <Image
-                src="/images/salon-bylinne-sacky.png"
-                alt="Bylinné sáčky a složené ručníky připravené k masáži"
+                src="/images/darkovy-poukaz.jpg"
+                alt="Dárkový poukaz Montra v obálce, vedle mísy s květy plumerie"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"

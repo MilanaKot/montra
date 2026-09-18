@@ -9,8 +9,8 @@ export function About() {
           <div className="lg:col-span-5">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
               <Image
-                src="/images/salon-recepce.png"
-                alt="Recepce salonu Montra Beroun s orchidejí a připravenými masážními oleji"
+                src="/images/salon-vstup.jpg"
+                alt="Vstup do salonu Montra Beroun — dřevěná recepce, orchidej a teplé večerní světlo"
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover"

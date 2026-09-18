@@ -44,8 +44,8 @@ export default function PoukazyPage() {
             <div className="lg:col-span-6">
               <div className="relative aspect-[5/4] overflow-hidden rounded-[2rem]">
                 <Image
-                  src="/images/salon-oleje-a-bylinky.png"
-                  alt="Masážní oleje, balzámy a thajské bylinky připravené v salonu"
+                  src="/images/darkovy-poukaz.jpg"
+                  alt="Dárkový poukaz Montra v obálce převázané provázkem, vedle svíčky a květů plumerie"
                   fill
                   priority
                   sizes="(min-width: 1024px) 50vw, 100vw"
