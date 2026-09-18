@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { LogoMark } from '@/components/brand/logo-mark'
 import { LOCATION } from '@/content/location'
 import { Container } from '@/components/ui'
 
@@ -30,9 +31,12 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 py-16 md:grid-cols-12 md:py-20">
           <div className="md:col-span-5">
-            <p className="text-[1.375rem] leading-none font-medium tracking-[0.24em] uppercase">
-              Montra
-            </p>
+            <div className="flex items-center gap-3 text-brand-ink">
+              <LogoMark className="h-9 w-auto" />
+              <p className="text-[1.375rem] leading-none font-medium tracking-[0.24em] uppercase">
+                Montra
+              </p>
+            </div>
             <p className="text-small mt-3 tracking-[0.18em] text-secondary uppercase">
               Thajské masáže &amp; wellness
             </p>

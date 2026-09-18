@@ -32,12 +32,21 @@ Kontrast `#5F4024` na krémové `#FFF5E6` je 8,7:1.
 
 ## Kde se logo na webu používá
 
-V hlavičce a patičce je zatím **jen textové „MONTRA“** — tak bylo
-rozhodnuto dřív. Znak žije ve faviconu a iOS ikoně, kde stojí sám a má
-prostor.
+V hlavičce a patičce stojí lotos vedle nápisu „MONTRA“, obojí v barvě
+`--color-brand-ink` (`#5F4024`) — vlastní barvě loga, odečtené z dodané
+ploché kresby. Kontrast na krémové je 8,7:1.
 
-Vrátit lotos vedle nápisu je teď na jeden řádek: vektor je připravený
-a barvu zdědí z CSS.
+Znak je vložený inline jako `src/components/brand/logo-mark.tsx`, ne jako
+soubor: `<img>` nemá barevný kontext, takže by se `currentColor` vyhodnotil
+na černou. Inline verze barvu dědí z CSS, takže stejná komponenta obslouží
+tmavý i světlý podklad.
+
+Před obkreslením se zahazují komponenty menší než 500 px. Výřez sedí těsně
+nad nápisem a zachytával levou patku písmene „M“, která se pak pod květem
+objevovala jako smítko.
+
+Celý lockup se v rozhraní nepoužívá — je stavěný na výšku a do hlavičky se
+nevejde.
 
 ## Co chybí
 

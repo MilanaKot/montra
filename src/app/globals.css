@@ -8,6 +8,9 @@
   --color-foreground: #000000;
   --color-secondary: #707070;
   --color-surface: #ffffff;
+  /* The logo's own ink, sampled from the supplied flat artwork. 8.7:1 on cream. */
+  --color-brand-ink: #5f4024;
+
   --color-accent: #b5613c;
   --color-accent-secondary: #c67349;
 
