@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
@@ -19,10 +20,20 @@ function Wordmark() {
   return (
     <Link
       href="/"
-      className="text-[1.25rem] leading-none font-medium tracking-[0.16em] whitespace-nowrap uppercase sm:text-[1.375rem] sm:tracking-[0.22em]"
+      className="flex items-center gap-2.5 sm:gap-3"
       aria-label="Montra Beroun — úvodní stránka"
     >
-      Montra
+      <Image
+        src="/images/montra-lotus-gold.png"
+        alt=""
+        width={614}
+        height={465}
+        priority
+        className="h-6 w-auto sm:h-7"
+      />
+      <span className="text-[1.25rem] leading-none font-medium tracking-[0.16em] whitespace-nowrap uppercase sm:text-[1.375rem] sm:tracking-[0.22em]">
+        Montra
+      </span>
     </Link>
   )
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { LOCATION } from '@/content/location'
 import { Container } from '@/components/ui'
@@ -22,8 +23,20 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 py-16 md:grid-cols-12 md:py-20">
           <div className="md:col-span-5">
-            <p className="text-[1.375rem] leading-none font-medium tracking-[0.22em] uppercase">
-              Montra
+            <div className="flex items-center gap-3">
+              <Image
+                src="/images/montra-lotus-gold.png"
+                alt=""
+                width={614}
+                height={465}
+                className="h-8 w-auto"
+              />
+              <p className="text-[1.375rem] leading-none font-medium tracking-[0.22em] uppercase">
+                Montra
+              </p>
+            </div>
+            <p className="text-small mt-3 tracking-[0.18em] text-secondary uppercase">
+              Thajské masáže &amp; wellness
             </p>
             <p className="text-body-lg mt-5 max-w-sm text-secondary">
               Thajské masáže v Berouně. Otevřeli jsme zde jako první salon Montra
