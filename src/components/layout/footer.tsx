@@ -37,7 +37,7 @@ export function Footer() {
               <LogoWordmark className="h-5 w-auto" />
             </div>
             <p className="text-small mt-3 tracking-[0.18em] text-secondary uppercase">
-              Thajské masáže &amp; wellness
+              Thajské masáže
             </p>
             <p className="text-body-lg mt-5 max-w-sm text-secondary">
               Thajské masáže v Berouně. Otevřeli jsme zde jako první salon Montra

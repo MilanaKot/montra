@@ -63,3 +63,9 @@ Vodorovná sestava se skládá ze znaku a nápisu zvlášť.
    proto lockup nepoužívá.
 3. **Zlatá verze** se podle zadání nechává na vývěsní štít, dárkové poukazy
    a tiskoviny — ne do rozhraní.
+
+## Podtitul v patičce
+
+V patičce je pod nápisem „Thajské masáže“ — bez „& wellness“, na přání
+klienta. Podtitul v logu („THAI MASSAGE & WELLNESS“) tím není dotčený,
+mění se jen text na webu.
