@@ -36,9 +36,8 @@ export function Footer() {
               <LogoMark className="h-9 w-auto" />
               <LogoWordmark className="h-5 w-auto" />
             </div>
-            <p className="text-body-lg mt-6 max-w-sm text-secondary">
-              Thajské masáže v Berouně. Otevřeli jsme zde jako první salon Montra
-              v dubnu 2009.
+            <p className="text-small mt-4 tracking-[0.18em] text-secondary uppercase">
+              Thajské masáže
             </p>
           </div>
 
