@@ -1,44 +1,50 @@
-# Logo — jak je použité a co ještě chybí
+# Logo — assety a co ještě chybí
 
-## Zdroj
+## Zdroje
 
-`logo-original.webp` je to, co dodal klient: **rendrovaný mockup** — zlatá
-ražba na texturovaném krémovém disku, se zapečeným stínem a černými rohy.
-Není to produkční logo. Pro web z něj byla znovu vytvořena kresba.
+| Soubor | Co to je |
+|---|---|
+| `logo-flat-original.webp` | **plochá verze** dodaná klientem — tmavě hnědá na krémové, bez efektů. Z ní je odvozeno všechno, co web používá. |
+| `logo-original.webp` | starší **rendrovaný mockup** — zlatá ražba na texturovaném disku, se zapečeným stínem. Ponecháno pro referenci; web z něj už nečerpá. |
 
-## Jak z mockupu vznikly assety
+Plochá verze je čistá grafika: pozadí `#FEF7EA`, kresba `#5F4024`, polotónů
+pod jedno procento. Oddělení kresby od podkladu je proto triviální — stačí
+práh na světlost, žádné triky s teplotou barvy, které si vyžádal mockup.
 
-Maska se počítá ze dvou podmínek zároveň: pixel musí být **tmavší** než
-podklad a zároveň **teplejší** než podklad. Samotná tmavost nestačí — měkký
-stín v levém horním rohu je tmavý, ale neutrální, takže na teplotě neprojde
-a do kresby se nedostane. Podklad se odhaduje rozostřenou kopií plotny, aby
-gradient stínu nečetl jako inkoust.
-
-Výsledek:
+## Assety
 
 | Soubor | Použití |
 |---|---|
-| `public/images/montra-lotus-gold.png` | značka v hlavičce a patičce |
-| `public/images/montra-lotus-black.png` | jednobarevná varianta, zatím nepoužitá |
-| `src/app/icon.png` (512) | favicon — zlatý lotos na krémovém disku |
+| `public/brand/montra-mark.svg` | **vektor** samotného znaku, `fill="currentColor"` — barvu řídí CSS |
+| `public/brand/montra-lockup.svg` | **vektor** celého lockupu včetně podtitulu |
+| `public/brand/montra-mark.png` | rastr znaku, tmavě hnědá |
+| `public/brand/montra-lockup.png` | rastr lockupu, tmavě hnědá |
+| `public/brand/montra-lockup-cream.png` | krémová varianta na tmavé pozadí |
+| `src/app/icon.png` (512) | favicon — hnědý lotos na krémovém disku |
 | `src/app/apple-icon.png` (180) | ikona na plochu iOS |
-| `lockup-gold-extracted.png` | celý lockup; podtitul se z mockupu vytáhnout nepodařilo |
 
-Barva disku `#E2D2BA` je odečtená z originálu, ne zvolená — ikona tak drží
-značku a zároveň se neztratí na bílém panelu prohlížeče.
+Vektory vznikly obkreslením plochého originálu (potrace). Znak má 4,6 kB,
+lockup 14 kB. Vedle rastru je nerozeznatelný a na rozdíl od něj drží ostrost
+v jakékoli velikosti. Z mockupu by takový obkres nešel — zlatá ražba má
+texturu a měkké okraje, které se do křivek nepřevedou.
+
+Kontrast `#5F4024` na krémové `#FFF5E6` je 8,7:1.
+
+## Kde se logo na webu používá
+
+V hlavičce a patičce je zatím **jen textové „MONTRA“** — tak bylo
+rozhodnuto dřív. Znak žije ve faviconu a iOS ikoně, kde stojí sám a má
+prostor.
+
+Vrátit lotos vedle nápisu je teď na jeden řádek: vektor je připravený
+a barvu zdědí z CSS.
 
 ## Co chybí
 
-1. **Vektor.** Všechno výše je rastr dopočítaný z obrázku. Na tisk, na velká
-   zobrazení a na ostré vykreslení v libovolné velikosti je potřeba **SVG
-   nebo AI/EPS** od autora loga.
-2. **Podtitul „THAI MASSAGE & WELLNESS“.** V mockupu je drobný a prostrkaný;
-   z rastru vyšel roztrhaný, proto se nepoužívá. V patičce je zatím vysázený
-   textem (česky, „Thajské masáže & wellness“). Z vektoru půjde použít
-   originál.
-3. **Vodorovná varianta.** Dodané logo je stavěné na výšku. V hlavičce je
-   proto lotos vedle textového „MONTRA“. Pokud existuje oficiální vodorovný
-   lockup, nahradí to.
-4. **Rozhodnutí zlatá vs. černá.** Web teď používá zlatou. Jednobarevná černá
-   je připravená a je to změna jedné cesty k souboru
-   v `src/components/layout/header.tsx` a `footer.tsx`.
+1. **Původní křivky.** Obkres je dobrý, ale je to obkres. Od autora loga je
+   lepší získat zdrojové AI/EPS — hlavně kvůli tisku a kvůli tomu, aby
+   písmo v nápisu bylo skutečné písmo, ne obrys.
+2. **Vodorovná varianta.** Dodané logo je stavěné na výšku. V hlavičce se
+   proto lockup nepoužívá.
+3. **Zlatá verze** se podle zadání nechává na vývěsní štít, dárkové poukazy
+   a tiskoviny — ne do rozhraní.

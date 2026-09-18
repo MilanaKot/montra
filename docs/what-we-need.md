@@ -48,12 +48,17 @@ Stránky existují a obsahují pravidla, která známe ze současného webu (sto
 24 hodin, podmínky poukazů a akcí), ale s viditelnou poznámkou, že závazné
 znění teprve doplníme.
 
-## 4. Logo ve vektoru
+## 4. Zdrojové křivky loga — už ne blokující
 
-Dodaný soubor je rendrovaný mockup. Značku jsme z něj dopočítali, ale
-všechno je rastr. Pro tisk, velká zobrazení a ostré vykreslení potřebujeme
-**SVG nebo AI/EPS** od autora loga, včetně podtitulu „THAI MASSAGE &
-WELLNESS“.
+Plochá verze loga dorazila a web z ní čerpá: znak i celý lockup jsou
+obkreslené do SVG (`public/brand/`), barvu dědí z CSS, favicon a iOS ikona
+jsou přegenerované z ploché kresby.
+
+Zbývá jen **zdrojový soubor od autora loga** (AI/EPS) — kvůli tisku a kvůli
+tomu, aby nápis „Montra“ byl skutečné písmo, ne obrys. Na web to nemá vliv.
+
+Chybí také oficiální **vodorovná varianta**; dodaná je stavěná na výšku,
+takže v hlavičce se lockup nepoužívá.
 
 ## 5. Rezervační systém — rozhodnutí
 
