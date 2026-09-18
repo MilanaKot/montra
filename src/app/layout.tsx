@@ -3,6 +3,7 @@ import { EB_Garamond, Inter } from 'next/font/google'
 import { Header } from '@/components/layout/header'
 import { Footer } from '@/components/layout/footer'
 import { LOCATION } from '@/content/location'
+import { SITE_URL } from '@/lib/site-url'
 import './globals.css'
 
 /**
@@ -24,8 +25,6 @@ const inter = Inter({
   variable: '--font-inter',
   display: 'swap',
 })
-
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.montra.cz'
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

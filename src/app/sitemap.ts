@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { SERVICES } from '@/content/services'
+import { SITE_URL as SITE } from '@/lib/site-url'
 
-const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://www.montra.cz'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ['', '/masaze', '/akce', '/darkove-poukazy', '/o-nas', '/kontakt']
