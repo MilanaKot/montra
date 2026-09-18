@@ -1,64 +1,82 @@
 export interface Therapist {
   slug: string
-  /** Display name as used on the current site. */
   name: string
   /** Short line shown on the card. */
   specialization: string
   bio: string[]
-  /**
-   * Photo path. The real portraits live on the current site under
-   * montra.cz/maserky/ — drop them into public/images/tym/ under these names
-   * and they are picked up automatically. Until then the card renders initials.
-   */
   photo: string | null
   active: boolean
+  /**
+   * True while this entry is a stand-in rather than a real member of staff.
+   * Everything flagged here MUST be replaced before the site goes live —
+   * see docs/team-original.md for the real people and docs/content-migration.md §4.
+   */
+  isPlaceholder: boolean
 }
 
 /**
- * The Beroun team, transcribed from montra.cz/beroun/nase-maserky.
- * Note: Somyong is described on the current site as a "thajský masér" — the
- * new UI therefore says "náš tým" / "terapeut" rather than "masérky".
+ * ⚠️  ZÁSTUPNÉ PERSONY — NEPOUŽÍVAT V OSTRÉM PROVOZU  ⚠️
+ *
+ * The Beroun team is really Somyong, Kung and Mimi. Their names, biographies
+ * and portraits are NOT used here on purpose: this prototype ships
+ * AI-generated portraits, and putting a synthetic face under a real person's
+ * name would misrepresent both the staff and what a guest is booking.
+ *
+ * So the three entries below are invented people with invented histories,
+ * paired with the AI portraits. They preserve the real team's *shape* — one
+ * therapist trained in traditional Thai technique, one focused on relaxation
+ * and oils, one on the musculoskeletal side — so the layout and the
+ * therapist picker in the booking flow can be reviewed honestly.
+ *
+ * Before launch: replace these with the real content from docs/team-original.md
+ * and real photographs, and drop `isPlaceholder`.
  */
 export const THERAPISTS: Therapist[] = [
   {
-    slug: 'somyong',
-    name: 'Somyong',
+    slug: 'arthit',
+    name: 'Arthit',
     specialization: 'Tradiční thajská masáž · cílená práce se zády a šíjí',
     bio: [
-      'Somyong je naše slunce — má neomezenou zásobu pozitivní energie, kterou vás při masáži zahrne.',
-      'Je velmi kvalifikovaný thajský masér s rozsáhlými znalostmi. Své umění získával od dětství, v Thajsku provozoval vlastní masážní salon a pracoval v thajském sanatoriu v Bangkoku jako fyzioterapeut, kde spolupracoval s lékaři.',
-      'Dokáže u hosta najít místo, odkud napětí vychází, a ví, jak mu ulevit. V Berouně má dnes velkou klientelu ze širokého okolí.',
+      'Arthit se tradiční thajské masáži věnuje od mládí — techniku se učil v Thajsku a pracoval tam několik let, než přišel do Čech.',
+      'Pracuje spíš pomalu a s citem pro tlak, který host snese. Bývá vyhledávaný lidmi, kteří tráví den u počítače a cítí napětí v ramenou a šíji.',
+      'Domluví se česky i anglicky.',
     ],
-    photo: null,
+    photo: '/images/tym-arthit.png',
     active: true,
+    isPlaceholder: true,
   },
   {
-    slug: 'kung',
-    name: 'Kung',
-    specialization: 'Relaxační a olejové masáže',
+    slug: 'ploy',
+    name: 'Ploy',
+    specialization: 'Relaxační, olejové a aroma masáže',
     bio: [
-      'Kung k nám přiletěla teprve nedávno, ale už je velmi žádanou masérkou.',
-      'Můžete od ní očekávat vždy jen poctivou masáž, po které se vám uleví — a dokáže vám navodit slunečnou náladu i ve dnech deštivých.',
-      'Pokud hledáte relax na duši i na těle, objednejte se právě ke Kung.',
+      'Ploy má nejraději klidné olejové masáže — ty, u kterých hosté usínají.',
+      'Dobře pracuje s aromaterapií a ráda vůni vybere podle toho, jak se ten den cítíte. Pokud si nevíte rady, poradí.',
+      'V Berouně je součástí týmu několik let.',
     ],
-    photo: null,
+    photo: '/images/tym-ploy.png',
     active: true,
+    isPlaceholder: true,
   },
   {
-    slug: 'mimi',
-    name: 'Mimi',
+    slug: 'mali',
+    name: 'Mali',
     specialization: 'Tradiční thajská masáž · pohybový aparát',
     bio: [
-      'Mimi patří mezi oblíbené masérky našeho salonu. Své zkušenosti získala přímo v Thajsku, kde se věnovala tradiční thajské masáži a zdokonalovala své techniky.',
-      'Díky praxi a citlivému přístupu dokáže uvolnit ztuhlé svaly i zmírnit dlouhodobé napětí.',
-      'Ke každému hostovi přistupuje individuálně a masáž vždy přizpůsobí jeho aktuálním potřebám.',
+      'Mali se školila přímo v Thajsku a zaměřuje se na tradiční thajskou techniku — tlak, protažení a práci s celým tělem.',
+      'Ke každému hostovi přistupuje individuálně: než začne, vždy se zeptá, co vás trápí, a masáž tomu přizpůsobí.',
+      'Její masáže patří mezi nejintenzivnější, které u nás najdete.',
     ],
-    photo: null,
+    photo: '/images/tym-mali.png',
     active: true,
+    isPlaceholder: true,
   },
 ]
 
 export const ACTIVE_THERAPISTS = THERAPISTS.filter((t) => t.active)
+
+/** True while any therapist entry is still a stand-in. */
+export const TEAM_IS_PLACEHOLDER = THERAPISTS.some((t) => t.isPlaceholder)
 
 export function getTherapist(slug: string): Therapist | undefined {
   return THERAPISTS.find((t) => t.slug === slug)

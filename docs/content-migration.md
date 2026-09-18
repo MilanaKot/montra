@@ -61,19 +61,35 @@ kampaň bez uvedeného období. Nepřenesena jako samostatná stránka — masá
 existuje v katalogu jako `bio-kokosova`. Pokud má akce běžet dál, patří do
 `PROMOTIONS` v `src/content/promotions.ts` s konkrétním obdobím a slevou.
 
-## 4. Fotografie — chybí originály
+## 4. Fotografie a tým — zástupný obsah
 
 Původní fotky salonu (`montra.cz/galerie/*.jpg`) a portréty terapeutů
 (`montra.cz/maserky/*.jpg`) **nebylo možné stáhnout** — doména je blokovaná
-síťovou politikou tohoto prostředí.
+síťovou politikou prostředí, ve kterém prototyp vznikal.
 
-Aktuálně se používá pět atmosférických snímků z repozitáře
-(`public/images/`). **Nejsou to fotografie salonu Montra Beroun** — před
-spuštěním je nutné je nahradit skutečnými fotkami.
+### Fotografie
 
-Portréty terapeutů: vložte do `public/images/tym/` a doplňte cestu do pole
-`photo` v `src/content/therapists.ts`. Dokud je `photo: null`, karta zobrazí
-iniciálu — nikdy cizí fotku.
+Web používá dvanáct AI generovaných snímků v `public/images/`
+a `src/app/opengraph-image.png`. **Nejsou to fotografie salonu Montra
+Beroun.** Před spuštěním je nahraďte skutečnými.
+
+### Tým — vyžaduje pozornost
+
+`src/content/therapists.ts` neobsahuje skutečný tým. Somyong, Kung a Mimi
+jsou nahrazeni **vymyšlenými personami** Arthit, Ploy a Mali s AI portréty.
+
+Důvod: prototyp používá generované portréty a postavit syntetickou tvář pod
+jméno skutečného člověka by klamalo hosta, který si v kroku 4 rezervace
+vybírá, kdo ho bude masírovat — a bylo by to nekorektní i vůči samotným
+terapeutům.
+
+Skutečná jména, biografie a názvy souborů s fotkami jsou zachovány
+v **`docs/team-original.md`**.
+
+Každý zástupný záznam nese `isPlaceholder: true`; `TEAM_IS_PLACEHOLDER`
+zůstává `true`, dokud nejsou všechny nahrazeny. **Před spuštěním:** přepište
+obsah podle `docs/team-original.md` (pozor na léčebná tvrzení u Somyonga,
+viz §2), doplňte skutečné fotografie a příznak odstraňte.
 
 ## 5. E-shop se zbožím
 

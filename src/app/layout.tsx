@@ -63,7 +63,7 @@ function StructuredData() {
     url: SITE_URL,
     telephone: LOCATION.phone.e164,
     email: LOCATION.email,
-    image: `${SITE_URL}/images/salon-recepce.png`,
+    image: `${SITE_URL}/opengraph-image.png`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: LOCATION.address.street,

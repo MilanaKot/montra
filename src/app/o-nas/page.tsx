@@ -13,8 +13,9 @@ export const metadata: Metadata = {
 }
 
 const GALLERY = [
+  { src: '/images/salon-masazni-mistnost.png', alt: 'Masážní místnost s thajskou matrací v odpoledním světle' },
   { src: '/images/salon-relaxacni-zona.png', alt: 'Relaxační zóna s ratanovým lehátkem a čajem z citronové trávy' },
-  { src: '/images/salon-masazni-lehatko.png', alt: 'Thajská matrace připravená k tradiční masáži' },
+  { src: '/images/salon-parova-mistnost.png', alt: 'Párová místnost se dvěma matracemi vedle sebe' },
   { src: '/images/salon-bylinne-sacky.png', alt: 'Bylinné sáčky v mosazné míse vedle složených ručníků' },
   { src: '/images/salon-oleje-a-bylinky.png', alt: 'Masážní oleje, balzámy a sušené thajské bylinky' },
   { src: '/images/salon-recepce.png', alt: 'Recepce salonu s orchidejí a miskou s květy' },

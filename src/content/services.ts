@@ -6,6 +6,9 @@ const IMG = {
   herbs: '/images/salon-bylinne-sacky.png',
   reception: '/images/salon-recepce.png',
   lounge: '/images/salon-relaxacni-zona.png',
+  room: '/images/salon-masazni-mistnost.png',
+  backNeck: '/images/masaz-zada-a-sije.png',
+  couple: '/images/salon-parova-mistnost.png',
 } as const
 
 /**
@@ -35,7 +38,7 @@ export const SERVICES: Service[] = [
     notes: ['Masíruje se v zapůjčeném volném oděvu nebo ve spodním prádle.'],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.thai,
+    image: IMG.room,
     popular: true,
     legacyDescription:
       'Starověké umění, jehož základem je pročištění energetických drah, procházejících tělem, pomocí tlakových a tahových cviků. Je to vynikající prevence před nemocemi. Díky ní dosáhnete psychické pohody. Doporučujeme volný oděv, který Vám rádi zapůjčíme. Doporučená délka masáže 90 min. Úspěšná masáž při bolestech zad, migreně, stresu a mnoha dalších obtíží.',
@@ -85,7 +88,7 @@ export const SERVICES: Service[] = [
     ],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.thai,
+    image: IMG.backNeck,
     popular: true,
     legacyDescription:
       'Masáž zaměřená na šíji, hlavu, ramena, křížovou a bederní oblast. Pravidelná masáž odbourává i chronické bolesti zad. Thajská masáž zad účinně působí proti negativním účinkům stresu.',
@@ -109,7 +112,7 @@ export const SERVICES: Service[] = [
     ],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.lounge,
+    image: IMG.backNeck,
     legacyDescription:
       'Masáž k odstranění a prevenci bolestí hlavy a migrény, při které, jemnými hmaty, masérka uvolňuje šíjové a mimické svalstvo, využívá akupresurní body. Již po první masáži není migréna intenzivní. Nejvhodnější je masáž jako prevence. Pravidelná masáž Vás dokáže migreny zbavit.',
   },
@@ -155,7 +158,7 @@ export const SERVICES: Service[] = [
     notes: ['Masáž probíhá v oblečení — není potřeba se odstrojovat.'],
     requiredTherapists: 1,
     partySizes: [1, 2],
-    image: IMG.reception,
+    image: IMG.backNeck,
     legacyDescription:
       'Vhodná kdykoliv během dne či ráno. Office masáží se rozumí akutní masážní procedura uprostřed dne, která má za cíl zbavit napětí a tlaku. Tato masáž se zaměřuje na šíji, krk a ruce pro uvolnění karpálů. Vychází z tradiční thajské masáže. Masérka působí různými způsoby masírování a dochází tak k uvolnění napětí, zmírnění stresu a průchodnosti energie do konečků prstů. Masíruje se krk, šíje, ramena a ruce. Tato masáž probíhá v oblečení, lze při ní sedět i ležet. K této thajské masáži stačí půlhodina, během níž dojde k příjemnému uvolnění. Můžete si ale i dopřát masáž hodinovou.',
   },
@@ -199,7 +202,7 @@ export const SERVICES: Service[] = [
     notes: ['Při zakoupení celé série 10 procedur je další procedura zdarma.'],
     requiredTherapists: 1,
     partySizes: [1],
-    image: IMG.oil,
+    image: IMG.backNeck,
     legacyDescription:
       'Pomocí manuální thajské anti cellulite masáže a skořicového oleje, docílíte nejlepšího výsledku. Oleje obsahují přírodní látky, které zlepší krevní oběh a zbaví tělo toxických látek. Ve spojení s masáží pomáhají odbourat podkožní tuk a tím zmenšit objem. Masérka se přizpůsobí Vašemu tělu, masáž je ruční, neprobíhá strojově. Skořicový olej prohřívá a tím prokrvuje pokožku. Spolu se speciální masáží dochází k odbourávání celulitidy ve velmi krátké době. Vhodné jako serie opakovaných procedur. Doporučujeme po dobu procedur zvýšit pohyb a příjem tekutin (voda, bylinné čaje). PŘI ZAKOUPENÍ CELÉ SERIE PROCEDUR (10ks), DALŠÍ PROCEDURA ZDARMA. Doporučeno 10 intervalů po 90 min.',
   },
@@ -597,7 +600,7 @@ SERVICES.push(
     notes: ['Uvedená cena platí za dvě osoby dohromady.'],
     requiredTherapists: 2,
     partySizes: [2],
-    image: IMG.thai,
+    image: IMG.couple,
     popular: true,
     legacyDescription:
       'Nově si nyní můžete užívat až 120min jedinečné společné zážitky u provoněné relaxační masáže ve dvou... Párová masáž je komplexní regenerační péče celého těla spojená s biokokosovou olejovou masáží, která skvěle regeneruje a hydratuje pokožku! Kokosová masáž je unikátní procedura, která velice pozitivně působí proti únavě, zklidňuje psychiku, navozuje příjemné uvolnění organismu a odbourává stres. Budete se cítit jako znovuzrození. Bio kokosový olej je úžasný dar přírody. S pokožkou dokáže doslova zázraky! Nejen, že se dobře vstřebává a je vhodný pro jakýkoliv typ pokožky, ale hydratuje do hloubky a léčí.',
@@ -621,7 +624,7 @@ SERVICES.push(
     notes: ['Masáž provádějí dvě masérky současně — rezervace vyžaduje dva volné terapeuty.'],
     requiredTherapists: 2,
     partySizes: [1],
-    image: IMG.thai,
+    image: IMG.couple,
     legacyDescription:
       'Masáž „čtyř rukou“ je velmi intenzivní synchronní masáž, dvěma masérkami současně. Tato metoda znásobuje účinek klasické thajské olejové masáže a mnohem účinněji tak odbourává svalové napětí a stres. Thajská olejová masáž je prováděna originálním biokokosovým olejem. Jde o kombinaci klasické thajské masáže spolu s jemnou masáží celého těla od konečků prstců na nohách až po kořínky vlasů za pomocí olejů, které napomáhají k celkové relaxaci, odstranění únavy, bolesti a nastavení duševní a tělesné harmonie. Tento druh masáže je obzvláště účinný při odstraňování napětí a ztuhlosti svalů. Působí také blahodárně na pokožku. Doporučujeme masáž v délce 2 hodin.',
   },

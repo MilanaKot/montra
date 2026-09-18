@@ -14,22 +14,22 @@ const CHOICES = [
     title: 'Trápí mě záda a šíje',
     text: 'Cílené masáže zad, ramen a krku',
     href: '/masaze?kategorie=cilene',
-    image: '/images/salon-masazni-lehatko.png',
-    alt: 'Thajská matrace připravená k masáži, s válcovým polštářem a složeným oděvem',
+    image: '/images/masaz-zada-a-sije.png',
+    alt: 'Terapeutka uvolňuje hostovi svaly v oblasti zad a šíje',
   },
   {
     title: 'Chci pravou thajskou masáž',
     text: 'Tradiční tlaková a protahovací technika',
     href: '/masaze?kategorie=klasicke',
-    image: '/images/salon-bylinne-sacky.png',
-    alt: 'Bylinné sáčky v mosazné míse vedle složených ručníků',
+    image: '/images/salon-masazni-lehatko.png',
+    alt: 'Thajská matrace připravená k tradiční masáži, s válcovým polštářem',
   },
   {
     title: 'Chceme masáž ve dvou',
     text: 'Párové masáže a společné zážitky',
     href: '/masaze?kategorie=specialni',
-    image: '/images/salon-recepce.png',
-    alt: 'Recepce salonu s orchidejí, miskou s květy a masážními oleji',
+    image: '/images/salon-parova-mistnost.png',
+    alt: 'Párová místnost se dvěma thajskými matracemi vedle sebe',
   },
 ]
 

@@ -53,8 +53,8 @@ export function Hero() {
           <div className="lg:col-span-6 xl:col-span-6">
             <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] sm:aspect-[5/4] lg:aspect-[4/5]">
               <Image
-                src="/images/salon-relaxacni-zona.png"
-                alt="Relaxační zóna salonu Montra — ratanové lehátko s lněnými přehozy a šálek čaje z citronové trávy"
+                src="/images/salon-masazni-mistnost.png"
+                alt="Masážní místnost salonu Montra Beroun — thajská matrace s válcovým polštářem v odpoledním světle"
                 fill
                 priority
                 sizes="(min-width: 1024px) 50vw, 100vw"
