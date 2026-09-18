@@ -16,7 +16,7 @@ export const LOCATION = {
     postalCode: '266 01',
     country: 'CZ',
     /** The salon is on the second floor, reachable by stairs. */
-    floorNote: 'Salon najdete ve druhém patře, přístup po schodech.',
+    floorNote: 'Salon je ve druhém patře. Přístup je po schodech — budova nemá výtah.',
   },
 
   geo: { lat: 49.9625932, lng: 14.0733429 },

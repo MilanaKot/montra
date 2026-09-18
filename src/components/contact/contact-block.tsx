@@ -23,7 +23,12 @@ export function ContactBlock({ withHeading = true }: { withHeading?: boolean }) 
                   <br />
                   {LOCATION.address.postalCode} {LOCATION.address.city}
                 </dd>
-                <p className="text-small mt-2 text-secondary">{LOCATION.address.floorNote}</p>
+                {/* Surfaced, not buried: a guest with limited mobility has to
+                    know this before booking, not on arrival. */}
+                <p className="mt-3 inline-flex items-center gap-2 rounded-pill border border-border-subtle px-3.5 py-1.5 text-[0.875rem]">
+                  <span aria-hidden="true">↑</span>
+                  2. patro · přístup po schodech, budova nemá výtah
+                </p>
               </div>
 
               <div>

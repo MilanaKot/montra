@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { LOCATION } from '@/content/location'
 import { Container } from '@/components/ui'
@@ -9,6 +8,14 @@ const NAV = [
   { href: '/darkove-poukazy', label: 'Dárkové poukazy' },
   { href: '/o-nas', label: 'O nás' },
   { href: '/kontakt', label: 'Kontakt' },
+]
+
+const BRANCHES = [
+  { href: 'https://www.montra.cz/rudna/', label: 'Rudná u Prahy' },
+  { href: 'https://www.montra.cz/mlada-boleslav/', label: 'Mladá Boleslav' },
+  { href: 'https://www.montra.cz/kladno/', label: 'Kladno' },
+  { href: 'https://www.montra.cz/praha10/', label: 'Praha 10' },
+  { href: 'https://www.montra.cz/praha6/', label: 'Praha 6' },
 ]
 
 const LEGAL = [
@@ -23,18 +30,9 @@ export function Footer() {
       <Container>
         <div className="grid gap-12 py-16 md:grid-cols-12 md:py-20">
           <div className="md:col-span-5">
-            <div className="flex items-center gap-3">
-              <Image
-                src="/images/montra-lotus-gold.png"
-                alt=""
-                width={614}
-                height={465}
-                className="h-8 w-auto"
-              />
-              <p className="text-[1.375rem] leading-none font-medium tracking-[0.22em] uppercase">
-                Montra
-              </p>
-            </div>
+            <p className="text-[1.375rem] leading-none font-medium tracking-[0.24em] uppercase">
+              Montra
+            </p>
             <p className="text-small mt-3 tracking-[0.18em] text-secondary uppercase">
               Thajské masáže &amp; wellness
             </p>
@@ -67,34 +65,19 @@ export function Footer() {
           </nav>
 
           <div className="md:col-span-4">
-            <h2 className="text-eyebrow text-secondary">Kontakt</h2>
-            <address className="mt-5 space-y-3 not-italic text-[0.9375rem]">
-              <p>
-                {LOCATION.address.street}
-                <br />
-                {LOCATION.address.postalCode} {LOCATION.address.city}
-              </p>
-              <p>
-                <a
-                  href={`tel:${LOCATION.phone.e164}`}
-                  className="underline underline-offset-4 transition-colors hover:text-secondary"
-                >
-                  {LOCATION.phone.display}
-                </a>
-                <br />
-                <a
-                  href={`mailto:${LOCATION.email}`}
-                  className="underline underline-offset-4 transition-colors hover:text-secondary"
-                >
-                  {LOCATION.email}
-                </a>
-              </p>
-              <p className="text-secondary">
-                {LOCATION.openingHoursSummary}
-                <br />
-                Neděle po dohodě
-              </p>
-            </address>
+            <h2 className="text-eyebrow text-secondary">Montra</h2>
+            <ul className="mt-5 space-y-3">
+              {BRANCHES.map((b) => (
+                <li key={b.href}>
+                  <a
+                    href={b.href}
+                    className="text-[0.9375rem] text-secondary transition-colors hover:text-foreground"
+                  >
+                    {b.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 

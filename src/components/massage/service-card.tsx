@@ -12,15 +12,50 @@ export function ServiceCard({
   className,
   showImage = true,
   headingLevel = 'h3',
+  variant = 'full',
 }: {
   service: Service
   className?: string
   showImage?: boolean
   /** h2 when the cards sit directly under the page h1, h3 under a section h2. */
   headingLevel?: 'h2' | 'h3'
+  /**
+   * 'compact' is for the homepage: name, one line, price from, one link.
+   * Durations, category and the booking button live in the catalogue, where
+   * comparing is the point — on the homepage they read as a price table.
+   */
+  variant?: 'full' | 'compact'
 }) {
   const durations = service.durations.map((d) => d.minutes)
   const Heading = headingLevel as ElementType
+
+  if (variant === 'compact') {
+    return (
+      <article className={cn('group flex h-full flex-col', className)}>
+        <Link href={`/masaze/${service.slug}`} className="flex h-full flex-col">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[1.25rem]">
+            <Image
+              src={service.image}
+              alt={service.name}
+              fill
+              sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+              className="object-cover transition-transform duration-500 ease-out-soft group-hover:scale-[1.04]"
+            />
+          </div>
+          <Heading className="text-display-3 mt-5">{service.name}</Heading>
+          <p className="text-small mt-2 text-secondary">{service.summary}</p>
+          <p className="mt-4 flex items-center gap-2 pt-1 text-[0.9375rem] sm:mt-auto">
+            od {formatPrice(servicePriceFrom(service))}
+            <span aria-hidden="true" className="text-secondary">·</span>
+            <span className="inline-flex items-center gap-1.5 text-secondary transition-colors group-hover:text-foreground">
+              Zjistit více
+              <ArrowIcon className="size-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+            </span>
+          </p>
+        </Link>
+      </article>
+    )
+  }
 
   return (
     <article

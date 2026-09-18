@@ -1,3 +1,10 @@
+/*
+ * PARKED — not rendered anywhere.
+ *
+ * Showing concrete free slots implies the booking system is already wired
+ * up. It is not: slots come from the mock provider. Kept so the idea can be
+ * put back the moment a real availability backend exists.
+ */
 import Link from 'next/link'
 import { mockAvailability } from '@/features/booking/mock-availability'
 import { getService } from '@/content/services'

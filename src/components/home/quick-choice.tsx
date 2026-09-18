@@ -2,55 +2,56 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowIcon, Container, SectionHead } from '@/components/ui'
 
+/**
+ * The spine of the site: people arrive with a complaint, not with a product
+ * name. Everything below this section is subordinate to it.
+ */
 const CHOICES = [
   {
     title: 'Chci si odpočinout',
     text: 'Jemné olejové a aroma masáže',
     href: '/masaze?kategorie=relaxacni',
     image: '/images/salon-oleje-a-bylinky.jpg',
-    alt: 'Masážní oleje, balzámy a sušené bylinky na dřevěném stole',
+    alt: 'Masážní oleje a sušené bylinky na dřevěném stole',
   },
   {
     title: 'Trápí mě záda a šíje',
-    text: 'Cílené masáže zad, ramen a krku',
+    text: 'Uvolnit krk, ramena a záda',
     href: '/masaze?kategorie=cilene',
     image: '/images/masaz-zada-a-sije.jpg',
     alt: 'Terapeutka uvolňuje hostovi svaly v oblasti zad a šíje',
   },
   {
     title: 'Chci pravou thajskou masáž',
-    text: 'Tradiční tlaková a protahovací technika',
+    text: 'Tlaková a protahovací technika',
     href: '/masaze?kategorie=klasicke',
     image: '/images/salon-masazni-lehatko.jpg',
-    alt: 'Thajská matrace připravená k tradiční masáži, s válcovým polštářem',
+    alt: 'Thajská matrace připravená k tradiční masáži',
   },
   {
     title: 'Chceme masáž ve dvou',
-    text: 'Párové masáže a společné zážitky',
+    text: 'Vedle sebe, ve stejný čas',
     href: '/masaze?kategorie=specialni',
     image: '/images/salon-parova-mistnost.jpg',
-    alt: 'Párová místnost se dvěma thajskými matracemi vedle sebe',
+    alt: 'Párová místnost se dvěma matracemi vedle sebe',
   },
 ]
 
 export function QuickChoice() {
   return (
-    <section className="section" id="co-potrebujete">
+    <section className="section border-t border-border-hairline" id="co-potrebujete">
       <Container>
         <SectionHead
           eyebrow="Kudy začít"
           title="Co dnes potřebujete?"
-          lede="Čtyři nejčastější důvody, proč k nám hosté chodí. Vyberte ten svůj a my vám ukážeme jen to podstatné."
+          lede="Vyberte, s čím přicházíte. Zbytek za vás zúžíme my."
         />
 
-        <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <ul className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {CHOICES.map((c) => (
             <li key={c.href}>
-              <Link
-                href={c.href}
-                className="group flex h-full flex-col overflow-hidden rounded-card-lg border border-border-subtle bg-surface transition-colors duration-300 hover:border-foreground/30"
-              >
-                <div className="relative aspect-[5/4] overflow-hidden">
+              <Link href={c.href} className="group block">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-[1.25rem]">
                   <Image
                     src={c.image}
                     alt={c.alt}
@@ -59,14 +60,11 @@ export function QuickChoice() {
                     className="object-cover transition-transform duration-500 ease-out-soft group-hover:scale-[1.04]"
                   />
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-display-3">{c.title}</h3>
-                  <p className="text-small mt-2.5 flex-1 text-secondary">{c.text}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-[0.9375rem]">
-                    Vybrat
-                    <ArrowIcon className="transition-transform duration-300 group-hover:translate-x-1" />
-                  </span>
-                </div>
+                <h3 className="text-display-3 mt-5 lg:min-h-[2.2em]">{c.title}</h3>
+                <p className="text-small mt-2 inline-flex items-center gap-2 text-secondary">
+                  {c.text}
+                  <ArrowIcon className="size-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </p>
               </Link>
             </li>
           ))}

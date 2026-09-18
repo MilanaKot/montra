@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
@@ -20,20 +19,10 @@ function Wordmark() {
   return (
     <Link
       href="/"
-      className="flex items-center gap-2.5 sm:gap-3"
+      className="text-[1.25rem] leading-none font-medium tracking-[0.18em] whitespace-nowrap uppercase sm:text-[1.375rem] sm:tracking-[0.24em]"
       aria-label="Montra Beroun — úvodní stránka"
     >
-      <Image
-        src="/images/montra-lotus-gold.png"
-        alt=""
-        width={614}
-        height={465}
-        priority
-        className="h-6 w-auto sm:h-7"
-      />
-      <span className="text-[1.25rem] leading-none font-medium tracking-[0.16em] whitespace-nowrap uppercase sm:text-[1.375rem] sm:tracking-[0.22em]">
-        Montra
-      </span>
+      Montra
     </Link>
   )
 }
@@ -109,8 +98,8 @@ export function Header() {
         <div className="flex h-16 items-center justify-between gap-3 sm:gap-6 md:h-20">
           <div className="flex min-w-0 items-center gap-8">
             <Wordmark />
-            <nav aria-label="Hlavní navigace" className="hidden lg:block">
-              <ul className="flex items-center gap-7">
+            <nav aria-label="Hlavní navigace" className="hidden md:block">
+              <ul className="flex items-center gap-5 lg:gap-7">
                 {NAV.map((item) => {
                   const active = pathname === item.href || pathname.startsWith(`${item.href}/`)
                   return (
@@ -148,7 +137,7 @@ export function Header() {
               onClick={() => setMenuOpen((v) => !v)}
               aria-expanded={menuOpen}
               aria-controls="mobilni-menu"
-              className="grid size-10 shrink-0 place-items-center rounded-full transition-colors hover:bg-foreground/[0.06] lg:hidden"
+              className="grid size-10 shrink-0 place-items-center rounded-full transition-colors hover:bg-foreground/[0.06] md:hidden"
             >
               <span className="sr-only">{menuOpen ? 'Zavřít menu' : 'Otevřít menu'}</span>
               <svg viewBox="0 0 20 20" className="size-5" aria-hidden="true" fill="none">
@@ -176,7 +165,7 @@ export function Header() {
       {menuOpen ? (
         <div
           id="mobilni-menu"
-          className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-border-hairline bg-background lg:hidden"
+          className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto border-t border-border-hairline bg-background md:hidden"
         >
           <Container>
             <nav aria-label="Hlavní navigace (mobil)" className="py-6">
